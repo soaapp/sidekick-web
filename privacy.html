@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Sidekick</title>
+  <meta name="description" content="How Sidekick collects, uses, and protects your data." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .doc { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    .doc h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.6px; margin: 0 0 8px; }
+    .doc .meta { font-size: 14px; color: var(--on-surface-variant); margin-bottom: 32px; }
+    .doc h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.2px; margin: 36px 0 12px; }
+    .doc p, .doc li { font-size: 15px; line-height: 1.7; color: var(--on-surface); }
+    .doc ul { padding-left: 22px; }
+    .doc strong { font-weight: 700; }
+    .back { display: inline-block; margin-bottom: 24px; font-size: 14px; font-weight: 600; color: var(--primary); }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-row">
+      <a href="/" class="wordmark">Sidekick</a>
+      <nav class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/#waitlist" class="btn-ghost-sm">Get notified</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <a href="/" class="back">← Back to home</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: April 18, 2026</p>
+
+    <p>
+      Sidekick ("we", "our", "the app") is built privacy-first. This policy explains what we
+      collect, why, and how we keep it safe. If anything here is unclear, email
+      <a href="mailto:hello@yoursidekick.ca">hello@yoursidekick.ca</a>.
+    </p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li><strong>Account data</strong> — your email, first name, last name (only what you give us at sign-up). Required for authentication.</li>
+      <li><strong>App data</strong> — your goals, tasks, calendar events, time blocks, life areas, energy logs, rewards. Stored in your private user space in our database. Used only to power the app's coaching, scheduling, and recap features.</li>
+      <li><strong>Calendar permissions</strong> — if you connect Google Calendar or your device calendar, Sidekick reads your events to schedule around them and (with your permission) writes new events you create. We don't read events you haven't authorized.</li>
+      <li><strong>OAuth tokens</strong> — for Google services you connect. Stored encrypted on-device.</li>
+      <li><strong>Push notification token</strong> — to deliver your morning brief and reminders.</li>
+      <li><strong>Subscription state</strong> — whether you're on the free or Pro plan. Managed via the App Store / Google Play (we don't see your card).</li>
+    </ul>
+
+    <h2>What we don't collect</h2>
+    <ul>
+      <li>We don't sell your data to anyone. Ever.</li>
+      <li>We don't use your data to train AI models.</li>
+      <li>We don't show ads.</li>
+      <li>We don't track you across other apps or websites.</li>
+    </ul>
+
+    <h2>How we use AI</h2>
+    <p>
+      Sidekick's coaching, natural-language input, and recap features are powered by
+      OpenAI's API. When you use these features, the relevant context (goals, schedule,
+      energy state) is sent to OpenAI through our backend so the model can generate a
+      response. OpenAI does not retain this data for training under our API agreement.
+      Free-tier users get template-based coaching that runs entirely on-device — no AI
+      requests are made.
+    </p>
+
+    <h2>Where your data lives</h2>
+    <ul>
+      <li><strong>Authentication</strong>: Firebase Authentication (Google Cloud, US/Canada regions)</li>
+      <li><strong>App data</strong>: Cloud Firestore (Google Cloud), scoped per-user with security rules that prevent any user from reading another user's data</li>
+      <li><strong>AI processing</strong>: OpenAI API, called server-side via our Cloud Function (no data persisted there)</li>
+      <li><strong>Subscription</strong>: RevenueCat (handles App Store / Play Store receipts)</li>
+    </ul>
+
+    <h2>Your rights</h2>
+    <ul>
+      <li><strong>Access</strong> — you can view all your data inside the app at any time.</li>
+      <li><strong>Export</strong> — email us at <a href="mailto:hello@yoursidekick.ca">hello@yoursidekick.ca</a> and we'll send your full data within 30 days.</li>
+      <li><strong>Deletion</strong> — you can delete your account from Settings. Your data is permanently removed within 30 days. No backups retained beyond that window.</li>
+      <li><strong>Portability</strong> — your data export is JSON, openable in any text editor.</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>
+      All data is transmitted over TLS. Firestore rules enforce per-user isolation at the
+      database level — even our own staff cannot read your data without explicit access.
+      OAuth tokens are stored on-device using <code>flutter_secure_storage</code>
+      (iOS Keychain / Android Keystore). Email/password accounts require email
+      verification before login.
+    </p>
+
+    <h2>Children</h2>
+    <p>
+      Sidekick is not directed at children under 13. We do not knowingly collect data from
+      children. If you believe a child has signed up, contact us and we'll delete the
+      account.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      We'll update this page if anything changes and notify you in-app for material
+      changes. Your continued use means you accept the updated policy.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions, concerns, data requests:
+      <a href="mailto:hello@yoursidekick.ca">hello@yoursidekick.ca</a>
+    </p>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <span class="wordmark">Sidekick</span>
+        <span class="footer-meta">© 2026 Sidekick · Made in Canada</span>
+      </div>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:hello@yoursidekick.ca">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
