@@ -21,8 +21,10 @@
   <meta name="twitter:description" content="The AI prompts you, not the other way around." />
   <meta name="twitter:image" content="https://yoursidekick.ca/og.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <!-- Favicon / App Icon -->
+  <link rel="icon" type="image/png" href="app-icon.png" />
+  <link rel="apple-touch-icon" href="app-icon.png" />
+  <link rel="shortcut icon" type="image/png" href="app-icon.png" />
 
   <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +36,10 @@
 <body>
   <header class="nav">
     <div class="container nav-row">
-      <a href="/" class="wordmark">Sidekick</a>
+      <a href="/" class="brand">
+        <img src="app-icon.png" alt="" class="brand-icon" width="36" height="36" />
+        <span class="wordmark">Sidekick</span>
+      </a>
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
@@ -47,6 +52,9 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-icon-wrap">
+          <img src="app-icon.png" alt="Sidekick app icon" class="hero-icon" width="140" height="140" />
+        </div>
         <div class="badge">Now on the App Store</div>
         <h1>
           Your <span class="grad-text">proactive</span><br />
