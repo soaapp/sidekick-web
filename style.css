@@ -100,17 +100,21 @@ button { font-family: inherit; cursor: pointer; }
   padding-block: 16px;
 }
 .brand {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
 }
 .brand-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px; /* iOS-ish squircle at small size */
-  box-shadow: 0 2px 6px rgba(8, 70, 237, 0.14);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px; /* ~iOS squircle at small size */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   display: block;
+  flex-shrink: 0;
 }
 .wordmark {
   font-size: 22px;
@@ -195,7 +199,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 640px) {
   .hero { padding: 32px 0 72px; }
-  .hero-icon { width: 112px; height: 112px; border-radius: 26px; }
+  .hero-icon { width: 80px; height: 80px; border-radius: 18px; }
 }
 .hero::before {
   content: '';
@@ -205,11 +209,11 @@ button { font-family: inherit; cursor: pointer; }
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(253, 212, 0, 0.22),
-      transparent 40%
+      rgba(253, 212, 0, 0.10),
+      transparent 35%
     ),
     radial-gradient(
-      ellipse at 50% 10%,
+      ellipse at 50% 15%,
       rgba(8, 70, 237, 0.10),
       transparent 60%
     );
@@ -222,27 +226,27 @@ button { font-family: inherit; cursor: pointer; }
 .hero-icon-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 .hero-icon {
-  width: 140px;
-  height: 140px;
-  border-radius: 32px; /* iOS squircle-ish at 140px (~22.8%) */
+  width: 96px;
+  height: 96px;
+  border-radius: 22px; /* ~iOS squircle at 96px (22.9%) */
   display: block;
-  /* Power-yellow glow echoing the icon's bg + subtle blue shadow for depth */
+  overflow: hidden; /* belt + suspenders for the radius clip */
+  /* Soft, elegant drop shadow — depth without drama */
   box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.04),
-    0 18px 40px rgba(253, 212, 0, 0.38),
-    0 8px 24px rgba(8, 70, 237, 0.18),
-    0 2px 6px rgba(0, 0, 0, 0.08);
-  animation: hero-icon-float 6s ease-in-out infinite;
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 10px 24px rgba(8, 70, 237, 0.14),
+    0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@keyframes hero-icon-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-icon { animation: none; }
+.hero-icon:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0 14px 30px rgba(8, 70, 237, 0.18),
+    0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .badge {
   display: inline-block;
