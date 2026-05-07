@@ -35,7 +35,7 @@
   <main class="doc">
     <a href="/" class="back">← Back to home</a>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: April 18, 2026</p>
+    <p class="meta">Last updated: May 7, 2026</p>
 
     <p>
       Sidekick ("we", "our", "the app") is built privacy-first. This policy explains what we
@@ -69,6 +69,70 @@
       response. OpenAI does not retain this data for training under our API agreement.
       Free-tier users get template-based coaching that runs entirely on-device — no AI
       requests are made.
+    </p>
+
+    <h2>Google user data</h2>
+    <p>
+      If you connect Google Calendar or Google Tasks, Sidekick uses Google's OAuth to
+      request access to those services. Here is exactly what we do with the data we
+      receive from Google APIs.
+    </p>
+
+    <p><strong>What we access</strong></p>
+    <ul>
+      <li><strong>Calendar</strong> (<code>https://www.googleapis.com/auth/calendar</code>) — events, their times, titles, descriptions, and locations on calendars you choose to sync.</li>
+      <li><strong>Tasks</strong> (<code>https://www.googleapis.com/auth/tasks</code>) — your task lists and the items in them.</li>
+      <li><strong>Basic profile</strong> (<code>email</code>, <code>profile</code>, <code>openid</code>) — your email address and display name, used to identify your account.</li>
+    </ul>
+
+    <p><strong>How we use it</strong></p>
+    <ul>
+      <li><strong>Calendar events</strong> are displayed alongside your Sidekick schedule so the AI scheduler can route around your existing commitments and find free time for goals you've defined. With your permission, Sidekick can write new events you create in the app back to the Google Calendar you choose. Events created elsewhere are read-only.</li>
+      <li><strong>Tasks</strong> sync two-way: items you have on Google Tasks appear in Sidekick's todo list, and tasks you create or complete in Sidekick are mirrored back to the same Google list.</li>
+      <li><strong>Profile</strong> identifies your account during sign-in.</li>
+    </ul>
+
+    <p><strong>Who we share it with</strong></p>
+    <p>
+      Google user data is only shared with the service providers we need to operate
+      Sidekick's features:
+    </p>
+    <ul>
+      <li><strong>Google Cloud Firestore</strong> — your data is stored in a private,
+        per-user space with security rules that prevent any other user from reading it.</li>
+      <li><strong>OpenAI</strong> — when you use AI-powered coaching, scheduling, or recap
+        features, the relevant context (which may include calendar event titles, times,
+        and your tasks) is sent to OpenAI through our backend Cloud Function so the
+        model can generate a response. OpenAI does not retain this data for training
+        under our API agreement.</li>
+    </ul>
+    <p>
+      We do not sell, rent, or trade Google user data. We do not transfer it to any
+      other party except as listed above or where required by law.
+    </p>
+
+    <p><strong>What we never do with Google user data</strong></p>
+    <ul>
+      <li>Use it for advertising, retargeting, or personalized marketing.</li>
+      <li>Use it to train, develop, or fine-tune any generalized AI/ML model.</li>
+      <li>Allow humans (including Sidekick staff) to read it, except where you have
+        given explicit consent (e.g., debugging a specific issue you reported), where
+        necessary for security, or to comply with applicable law.</li>
+    </ul>
+
+    <p><strong>Revoking access</strong> — you can disconnect Google at any time from
+      Sidekick's Settings, or revoke access via your
+      <a href="https://myaccount.google.com/permissions">Google Account permissions
+      page</a>. Tokens stored on your device are deleted when you disconnect.</p>
+
+    <p><strong>Limited Use disclosure</strong></p>
+    <p>
+      Sidekick's use and transfer to any other app of information received from Google
+      APIs will adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google
+      API Services User Data Policy</a>, including the Limited Use requirements. The use
+      of raw or derived user data received from Workspace APIs will adhere to the Google
+      User Data Policy, including the Limited Use requirements.
     </p>
 
     <h2>Where your data lives</h2>
