@@ -80,9 +80,9 @@
 
     <p><strong>What we access</strong></p>
     <ul>
-      <li><strong>Calendar</strong> (<code>https://www.googleapis.com/auth/calendar</code>) — events, their times, titles, descriptions, and locations on calendars you choose to sync.</li>
-      <li><strong>Tasks</strong> (<code>https://www.googleapis.com/auth/tasks</code>) — your task lists and the items in them.</li>
-      <li><strong>Basic profile</strong> (<code>email</code>, <code>profile</code>, <code>openid</code>) — your email address and display name, used to identify your account.</li>
+      <li><strong>Calendar</strong> — events, their times, titles, descriptions, and locations on calendars you choose to sync.</li>
+      <li><strong>Tasks</strong> — your task lists and the items in them.</li>
+      <li><strong>Basic profile</strong> — your email address and display name, used to identify your account.</li>
     </ul>
 
     <p><strong>How we use it</strong></p>
@@ -98,13 +98,13 @@
       Sidekick's features:
     </p>
     <ul>
-      <li><strong>Google Cloud Firestore</strong> — your data is stored in a private,
-        per-user space with security rules that prevent any other user from reading it.</li>
+      <li><strong>Google Cloud</strong> — your data is stored in a private, per-user
+        space with security rules that prevent any other user from reading it.</li>
       <li><strong>OpenAI</strong> — when you use AI-powered coaching, scheduling, or recap
         features, the relevant context (which may include calendar event titles, times,
-        and your tasks) is sent to OpenAI through our backend Cloud Function so the
-        model can generate a response. OpenAI does not retain this data for training
-        under our API agreement.</li>
+        and your tasks) is sent to OpenAI through our backend so the model can generate
+        a response. OpenAI does not retain this data for training under our API
+        agreement.</li>
     </ul>
     <p>
       We do not sell, rent, or trade Google user data. We do not transfer it to any
@@ -137,9 +137,9 @@
 
     <h2>Where your data lives</h2>
     <ul>
-      <li><strong>Authentication</strong>: Firebase Authentication (Google Cloud, US/Canada regions)</li>
-      <li><strong>App data</strong>: Cloud Firestore (Google Cloud), scoped per-user with security rules that prevent any user from reading another user's data</li>
-      <li><strong>AI processing</strong>: OpenAI API, called server-side via our Cloud Function (no data persisted there)</li>
+      <li><strong>Authentication</strong>: Google Cloud (US/Canada regions)</li>
+      <li><strong>App data</strong>: Google Cloud, scoped per-user with security rules that prevent any user from reading another user's data</li>
+      <li><strong>AI processing</strong>: OpenAI API, called server-side through our backend (no data persisted there)</li>
       <li><strong>Subscription</strong>: RevenueCat (handles App Store / Play Store receipts)</li>
     </ul>
 
@@ -153,11 +153,11 @@
 
     <h2>Security</h2>
     <p>
-      All data is transmitted over TLS. Firestore rules enforce per-user isolation at the
-      database level — even our own staff cannot read your data without explicit access.
-      OAuth tokens are stored on-device using <code>flutter_secure_storage</code>
-      (iOS Keychain / Android Keystore). Email/password accounts require email
-      verification before login.
+      All data is transmitted over TLS. Database security rules enforce per-user
+      isolation — even our own staff cannot read your data without explicit access.
+      OAuth tokens are stored on-device in the platform's secure keystore (iOS
+      Keychain / Android Keystore). Email/password accounts require email verification
+      before login.
     </p>
 
     <h2>Children</h2>
