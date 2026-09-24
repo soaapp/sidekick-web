@@ -35,7 +35,7 @@
   <main class="doc">
     <a href="/" class="back">← Back to home</a>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: May 7, 2026</p>
+    <p class="meta">Last updated: September 23, 2026</p>
 
     <p>
       Sidekick ("we", "our", "the app") is built privacy-first. This policy explains what we
@@ -51,6 +51,9 @@
       <li><strong>OAuth tokens</strong> — for Google services you connect. Stored encrypted on-device.</li>
       <li><strong>Push notification token</strong> — to deliver your morning brief and reminders.</li>
       <li><strong>Subscription state</strong> — whether you're on the free or Pro plan. Managed via the App Store / Google Play (we don't see your card).</li>
+      <li><strong>Usage data</strong> — which features you use and when (for example, opening the app, logging a session, or tapping a notification). Never the content of your goals, tasks, or events. It's stored in your private user space, kept for at most 12 months, and deleted with your account. You can turn it off anytime in Settings. We use it to improve Sidekick and to understand how the app is used overall.</li>
+      <li><strong>Anonymous totals</strong> — each night we roll usage data into daily totals (for example, "40 people logged a session today"). These contain no names, emails, or account IDs, and we never report a number drawn from fewer than 5 people. Because they can't be traced to anyone, we keep them after the underlying usage data is deleted.</li>
+      <li><strong>Crash reports</strong> — if the app crashes, a report with the error and technical details (no goal names, task names, or event titles) goes to Firebase Crashlytics so we can fix it.</li>
     </ul>
 
     <h2>What we don't collect</h2>
@@ -141,6 +144,8 @@
       <li><strong>App data</strong>: Google Cloud, scoped per-user with security rules that prevent any user from reading another user's data</li>
       <li><strong>AI processing</strong>: OpenAI API, called server-side through our backend (no data persisted there)</li>
       <li><strong>Subscription</strong>: RevenueCat (handles App Store / Play Store receipts)</li>
+      <li><strong>Usage data</strong>: your private user space in Google Cloud (at most 12 months); anonymous daily totals are stored separately</li>
+      <li><strong>Crash reports</strong>: Firebase Crashlytics (Google)</li>
     </ul>
 
     <h2>Your rights</h2>
@@ -154,7 +159,8 @@
     <h2>Security</h2>
     <p>
       All data is transmitted over TLS. Database security rules enforce per-user
-      isolation — even our own staff cannot read your data without explicit access.
+      isolation, so no other user can read your data. We never look at your data
+      without your permission (for example, when you ask us to help debug an issue).
       OAuth tokens are stored on-device in the platform's secure keystore (iOS
       Keychain / Android Keystore). Email/password accounts require email verification
       before login.
